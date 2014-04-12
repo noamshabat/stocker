@@ -1,0 +1,26 @@
+
+.slider-viewport{
+	background-color:#151515;
+	height:100%;
+	}
+	
+.slider-content{
+	height:100%;
+	background-color:transparent;
+	}
+	
+.slider-notch{
+	position:absolute;
+	font-size:12px;
+	display:inline-block;
+	color:#606060;
+	}
+	
+.slider-notch-text{
+	color:#606060;
+	position:relative;
+	left:-50%;
+	text-align:center;
+	}
+
+

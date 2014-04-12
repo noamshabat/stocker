@@ -1,0 +1,17 @@
+.TLSC-nav-button{
+	min-width:30px;
+	min-height:30px;
+	border:solid 1px black;
+	display:inline-block;
+	text-align:center;
+	line-height:30px;
+	cursor:hand;
+}
+.TLSC-nav-button:hover{
+	background-color: #eeeeee;
+}
+
+.TLSC-main{
+	min-height: :30px;
+	min-width:130px;
+}
