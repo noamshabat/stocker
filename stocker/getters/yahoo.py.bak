@@ -1,9 +1,9 @@
 from datetime import datetime,timedelta
 from decimal import *
 from logger.logger import Log
-import urllib.request, urllib.error, urllib.parse
-import simplejson as json
-import urllib.request, urllib.parse, urllib.error
+import urllib2
+import json
+import urllib
 
 class YahooGetter:
     
@@ -79,13 +79,11 @@ class YahooGetter:
         # url of yahoo finance api - inject symbol and requested dates.
         req = self.baseQuery%(self.symbol,fromStr,toStr)
         # url encode relevant parts.
-        req = self.baseUrl+urllib.parse.quote(req,"=&*")
+        req = self.baseUrl+urllib.quote(req,"=&*")
         
-        a = {'d':Decimal('12.232')}
-
         # send REST request to yahoo. get string repsonse.
-        strData = urllib.request.urlopen(req).read().decode("utf-8")
+        strData = urllib2.urlopen(req).read()
         
         # create json dict from string and return it.
-        return json.loads(strData,use_decimal=True)
+        return json.loads(strData)
     

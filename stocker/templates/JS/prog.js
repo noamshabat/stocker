@@ -5,7 +5,7 @@ function loadSymbol()
     
     // Assign handlers immediately after making the request,
     // and remember the jqXHR object for this request
-    var jqxhr = $.ajax( "https://stocker-c9-noam_shabat.c9.io/stock/"+symbol+"/weekly/data/" )
+    var jqxhr = $.ajax( "/stock/"+symbol+"/weekly/data/" )
     .done(function(data,statusText,response) {
         var now = new Date();
         var start = new Date(now.getTime()-1000*60*60*24*365);  // one year back
@@ -22,7 +22,7 @@ function markEdges()
 {
     // Assign handlers immediately after making the request,
     // and remember the jqXHR object for this request
-    var jqxhr = $.ajax( "https://stocker-c9-noam_shabat.c9.io/stock/"+symbol+"/weekly/edges/" )
+    var jqxhr = $.ajax( "/stock/"+symbol+"/weekly/edges/" )
     .done(function(data,statusText,response) {
         for ( var edge in data )
         {

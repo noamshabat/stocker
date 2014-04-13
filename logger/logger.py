@@ -1,3 +1,3 @@
 
-def Log(str):
-    print str
+def Log(string):
+    print(string)
